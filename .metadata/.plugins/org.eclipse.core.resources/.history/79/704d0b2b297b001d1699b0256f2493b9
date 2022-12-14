@@ -1,0 +1,97 @@
+console.log("This is script");
+
+const toggleSidebar = () => {
+  if ($(".sidebar").is(":visible")) {
+    $(".sidebar").css("display", "none");
+    $(".content").css("margin-left", "0%");
+  } else {
+    $(".sidebar").css("display", "block");
+    $(".content").css("margin-left", "20%");
+  }
+};
+
+
+
+		
+	
+
+                //check Password
+                $('#upassword').keyup(function () {
+                    if ($(this).val().length >= 4)
+                    {
+                        document.getElementById("message").style.color = 'green';
+                        document.getElementById("uconfirmpassword").removeAttribute("disabled")
+
+                        document.getElementById('message').innerHTML = "Strong Password !";
+                    } else
+                    {
+                        document.getElementById("message").style.color = 'red';
+                        $('#regbtn').addClass('disabled');
+                        document.getElementById('message').innerHTML = "Weak Password !";
+                        document.getElementById("uconfirmpassword").setAttribute("disabled", "")
+
+                    }
+                })
+
+
+                //check Confirm password
+
+                $('#uconfirmpassword').keyup(function () {
+                    if ($(this).val() == $('#upassword').val())
+                    {
+                        document.getElementById("message2").style.color = 'green';
+
+                        document.getElementById('message2').innerHTML = "Password match !";
+                        $('#regbtn').removeClass('disabled');
+                    } else
+                    {
+                        document.getElementById("message2").style.color = 'red';
+
+                        document.getElementById('message2').innerHTML = "Passowrd does not match !";
+                    }
+                });
+
+
+
+document.addEventListener("DOMContentLoaded", function(event) {
+   
+const showNavbar = (toggleId, navId, bodyId, headerId) =>{
+const toggle = document.getElementById(toggleId),
+nav = document.getElementById(navId),
+bodypd = document.getElementById(bodyId),
+headerpd = document.getElementById(headerId)
+
+// Validate that all variables exist
+if(toggle && nav && bodypd && headerpd){
+toggle.addEventListener('click', ()=>{
+// show navbar
+nav.classList.toggle('show')
+// change icon
+toggle.classList.toggle('bx-x')
+// add padding to body
+bodypd.classList.toggle('body-pd')
+// add padding to header
+headerpd.classList.toggle('body-pd')
+})
+}
+}
+
+showNavbar('header-toggle','nav-bar','body-pd','header')
+
+/*===== LINK ACTIVE =====*/
+const linkColor = document.querySelectorAll('.nav_link')
+
+function colorLink(){
+if(linkColor){
+linkColor.forEach(l=> l.classList.remove('active'))
+this.classList.add('active')
+}
+}
+linkColor.forEach(l=> l.addEventListener('click', colorLink))
+
+ // Your code to run since DOM is loaded and ready
+});
+
+
+
+           

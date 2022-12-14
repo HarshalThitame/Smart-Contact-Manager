@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+
+<head>
+<meta charset="UTF-8">
+<title th:text="${title}"></title>
+</head>
+
+<body>
+	<section>
+		<div class="container">
+
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th scope="col">User ID</th>
+						<th scope="col">SCMUSER<span th:text="${user.id}"></span></th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr>
+						<td class="fw-bold" scope="row">Email</td>
+						<td><span th:text="${user.email}"></span></td>
+					</tr>
+
+					<tr>
+						<td class="fw-bold" scope="row">Role</td>
+						<td><span th:text="${user.role}"></span></td>
+					</tr>
+
+					<tr>
+						<td class="fw-bold" scope="row">Is Active ?</td>
+						<td><span th:text="${user.enabled}"></span></td>
+					</tr>
+					
+					<tr>
+						<td class="fw-bold" scope="row">About</td>
+						<td><span th:text="${user.about}"></span></td>
+					</tr>
+
+
+				</tbody>
+
+			</table>
+
+		</div>
+	</section>
+</body>
+
+</html>

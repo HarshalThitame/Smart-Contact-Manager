@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<section>
+		<div class="container">
+			<div class="card mt-3">
+				<div class="card-body">
+					<h1
+						class="text-center mt-3 text-secondary font-italic font-weight-light">
+						About us...</h1>
+
+					<hr />
+					<h3 class="mt-3 text-secondary font-italic font-weight-light">
+						What is a contact management system?</h3>
+
+					<p class="text-secondary font-italic p-4 paragraph">Contact
+						management is the best solution to track and manage contacts as it
+						will present relevant information in a clear way which will help
+						you work efficiently. Contact management is a database with names,
+						addresses, phone numbers, emails and all information regarding
+						your contacts. You will be able to keep track of every contact,
+						update details regularly and view past conversations you had with
+						customers from a single platform. All members of your organization
+						will be able to access contact management system through a
+						centralized interface and have a clear view of each contact. You
+						will have a complete record of phone calls and emails, set
+						follow-up reminders and can add additional notes in reference to
+						the conversation you had with any contact. This will help you to
+						up-sell or cross-sell to your existing customers by recalling what
+						products or services they loved.</p>
+
+					<h3 class="mt-3 text-secondary font-italic font-weight-light">
+						Benefits of using a contact management system</h3>
+
+					<p class="text-secondary font-italic p-4 paragraph">There are
+						many good features a contact management system has that can help
+						you manage, organize and share contact information seamlessly. But
+						the most common features a good contact management software must
+						have is that it should be cloud-based, integrate easily with your
+						commonly used applications, allow you to group contacts, add
+						relevant notes and set reminders for meetings.</p>
+
+
+				</div>
+			</div>
+		</div>
+		
+
+	</section>
+</body>
+</html>

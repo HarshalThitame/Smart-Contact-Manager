@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<section class="banner d-flex justify-content-center align-items-center">
+		<div class="container">
+
+			<div class="card">
+				<div class="card-body text-center my-4">
+
+				
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 offset-md-3">
+								<div class="card">
+									<div class="card-body">
+
+										<form action="" th:object="${password}" method="post"
+											th:action="@{/user/password-proccess}" class="mt-2" autocomplete="off">
+
+
+											<div class="col-auto">
+												<div class="input-group mb-2">
+													
+													<input type="text" class="form-control m-2" id=""
+														 placeholder="Enter Email id"
+														name="fakeemail" autocomplete="false" >
+												</div>
+											</div>
+											
+											<div class="col-auto">
+												<div class="input-group mb-2">
+													
+													<input type="text" class="form-control m-2" id=""
+														 placeholder="Enter Phone Number"
+														name="fakephone">
+												</div>
+											</div>
+											<hr />
+											
+											<div class="col-auto">
+
+													<div class="form-group my-2 text-end">
+														<input type="text" id="upassword" name="fakenewpassword"
+															class="form-control" placeholder="Enter Password"
+															required /> <label id="message"></label>
+													</div>
+												</div>
+											
+											<div class="col-auto">
+
+													<div class="form-group my-2 text-end">
+														<input type="password" id="uconfirmpassword"
+															name="fakeponfirmpassword" class="form-control" style=""
+															placeholder="Confirm Password" disabled required /> <label
+															id="message2" style="color: red"></label>
+													</div>
+												</div>
+											
+											<div class="container text-center mt-4">
+		                                        <button type="submit" id="regbtn" class="btn btn-outline-warning btn-lg text-dark">Update Password</button>
+											</div>
+										
+										</form>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		
+		
+	</section>
+</body>
+</html>

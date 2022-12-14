@@ -1,0 +1,10 @@
+package com.smart.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.smart.entites.Contact;
+
+public interface ContactRepositiory extends JpaRepository<Contact, Integer> {
+
+	//pegination
+}

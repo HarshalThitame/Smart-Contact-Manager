@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<section>
+		<div class="container">
+			<div class="card mt-3">
+				<div class="card-body">
+					<h1
+						class="text-center mt-3 text-secondary font-italic font-weight-light">
+						About us...</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

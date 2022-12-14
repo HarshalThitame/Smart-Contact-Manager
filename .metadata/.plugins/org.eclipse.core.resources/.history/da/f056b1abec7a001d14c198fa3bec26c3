@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+
+<head>
+<meta charset="UTF-8">
+<title th:text="${title}"></title>
+</head>
+
+<body>
+	<section>
+		<div class="container">
+			<div class="card">
+				<div class="card-body">
+					<div class="container text-center">
+
+						<img style="height: 200px; width: 200px;"
+							class="my_profile_picture" alt=""
+							th:src="@{'/img/dashboard_logo.png'}">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>

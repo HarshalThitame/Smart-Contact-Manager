@@ -1,0 +1,17 @@
+package com.smart.dao;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.smart.entites.Contact;
+
+public interface ContactRepositiory extends JpaRepository<Contact, Integer> {
+
+	//pegination..
+	
+	public List<Contact> findContactsByUser() {
+		
+	}
+	
+}

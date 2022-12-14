@@ -1,0 +1,5 @@
+package com.smart.entites;
+
+public class User {
+
+}

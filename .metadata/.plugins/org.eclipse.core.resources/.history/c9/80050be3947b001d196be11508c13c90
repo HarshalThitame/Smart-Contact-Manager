@@ -1,0 +1,5 @@
+package com.smart.controller;
+
+public class AdminController {
+
+}

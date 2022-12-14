@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+	<section>
+		<div class="wrapper fadeInDown">
+			<div id="formContent">
+				<!-- Tabs Titles -->
+
+				<!-- Icon -->
+				<div class="text-center">											
+							<h1 class="text-center">
+								<img class="mx-auto" style="width: 100px;" th:src="@{/img/login.png}" alt="" /> 
+								Log In Here
+							</h1>
+						</div>
+
+				<!-- Login Form -->
+				<form>
+					<input type="text"
+					 id="username" 
+					 class="fadeIn second loginpage" 
+					 name="username"						
+					 placeholder="username">
+					 
+					 <input 
+					 type="text" 
+					 id="password"						
+					 class="fadeIn third loginpage" 
+					 name="password" 
+					 placeholder="password">
+					 
+					 
+					<input type="submit" 
+					class="fadeIn fourth" 
+					value="Log In">
+				</form>
+
+				<!-- Remind Passowrd -->
+				<div id="formFooter">
+					<a class="underlineHover" href="#">Forgot Password?</a>
+				</div>
+
+			</div>
+		</div>
+	</section>
+</body>
+</html>

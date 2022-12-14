@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>User Dashboard</title>
+</head>
+<body>
+	<h1>welcome you are normal user</h1>
+	<h2>this  is private dashboard</h2>
+</body>
+</html>

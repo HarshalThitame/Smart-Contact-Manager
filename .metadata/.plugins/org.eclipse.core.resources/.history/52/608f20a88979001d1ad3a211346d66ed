@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title th:text="${title}"></title>
+</head>
+<body>
+	<section>
+		<div class="container">
+			<div class="card mr-3">
+				<div class="card-body">
+					<h1 class="text-center">Add Contact</h1>
+					<div class="container-fluid mt-1">
+						<div class="row">
+							<div class="col-md-10 offset-1">
+								<form action="" th:object="${contact}"
+									enctype="multipart/form-data" method="post"
+									th:action=@{/user/process-contact} class="mt-2">
+
+
+									<!-- First name -->
+									<div class="col-auto">
+										<label class="sr-only" for="inlineFormInputGroup">Username</label>
+
+										<div class="input-group mb-2">
+											<div class="input-group-prepend">
+												<div class="input-group-text">
+													<img th:src="@{/img/icons/plus.png}" alt="" />
+												</div>
+											</div>
+											<input type="text" class="form-control" id="firstname"
+												placeholder="Enter First name" name="name">
+										</div>
+									</div>
+
+
+									<!-- Second name -->
+									<div class="col-auto">
+										<label class="sr-only" for="inlineFormInputGroup">Username</label>
+
+										<div class="input-group mb-2">
+											<div class="input-group-prepend">
+												<div class="input-group-text">
+													<img th:src="@{/img/icons/plus.png}" alt="" />
+												</div>
+											</div>
+											<input type="text" class="form-control" id="secondName"
+												placeholder="Enter Nick name" name="secondName">
+										</div>
+									</div>
+
+
+
+									<!-- Phone -->
+									<div class="col-auto">
+										<label class="sr-only" for="inlineFormInputGroup">Username</label>
+
+										<div class="input-group mb-2">
+											<div class="input-group-prepend">
+												<div class="input-group-text">
+													<img th:src="@{/img/icons/phone.png}" alt="" />
+												</div>
+											</div>
+											<input type="text" class="form-control" id="phone"
+												placeholder="Enter Phone Number" name="phone">
+										</div>
+									</div>
+
+									<!-- email -->
+									<div class="col-auto">
+										<label class="sr-only" for="inlineFormInputGroup">Username</label>
+
+										<div class="input-group mb-2">
+											<div class="input-group-prepend">
+												<div class="input-group-text">
+													<img th:src="@{/img/icons/email.png}" alt="" />
+												</div>
+											</div>
+											<input type="text" class="form-control" id="email"
+												placeholder="Enter Email Id" name="email">
+										</div>
+									</div>
+
+									<!-- work -->
+									<div class="col-auto">
+										<label class="sr-only" for="inlineFormInputGroup">Username</label>
+
+										<div class="input-group mb-2">
+											<div class="input-group-prepend">
+												<div class="input-group-text">
+													<img th:src="@{/img/icons/portfolio.png}" alt="" />
+												</div>
+											</div>
+											<input type="text" class="form-control" id="work"
+												placeholder="Enter Work here" name="work">
+										</div>
+									</div>
+
+
+
+
+									<!-- Description -->
+									<div class="col-auto">
+										<textarea placeholder="Enter contact description"
+											name="description" id="description" class="form-control"
+											rows="10"></textarea>
+									</div>
+
+									
+									<!-- Profile -->
+									
+									<div class="col-auto">
+										<label class="sr-only" for="inlineFormInputGroup">Username</label>
+
+										<div class="input-group mb-2">
+											<div class="input-group-prepend">
+												<div class="input-group-text">
+													<img th:src="@{/img/icons/portfolio.png}" alt="" />
+												</div>
+											</div>
+											<input type="file" class="form-control" id="work"
+												placeholder="Enter Work here" name="profile">
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

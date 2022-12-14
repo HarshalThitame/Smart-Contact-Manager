@@ -1,0 +1,77 @@
+package com.smart.controller;
+
+import java.security.Principal;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.smart.dao.UserRepositiory;
+import com.smart.entites.Contact;
+import com.smart.entites.User;
+
+@RequestMapping("/user")
+@Controller
+public class UserController {
+
+	@Autowired
+	private UserRepositiory userRepositiory;
+	
+	
+	//method common data to handler
+	@ModelAttribute
+	public void addCommonData(Model model,Principal principal) {
+		String userName = principal.getName();
+		User user = this.userRepositiory.getUserByUserName(userName);
+		model.addAttribute("user", user);
+
+	}
+	
+	
+	@RequestMapping("/index")
+	public String dashboard(Model model,Principal principal) {
+		model.addAttribute("title", "User Dashboard");		
+		return "normal/index";
+	}
+	
+	
+	
+	//open add form handler
+	@GetMapping("/add-contact")
+	public String openAddContact(Model model) {
+		
+		model.addAttribute("title", "Add Contact");
+		model.addAttribute("contact", new Contact());
+		return "normal/add_contact_form";
+	}
+	
+	/* proccessing contact form */
+	@PostMapping("/process-contact")
+	public String processContact(@ModelAttribute Contact contact,Principal principal) {
+		
+		
+		try {
+			
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+		
+		
+		String name = principal.getName();
+		User user = this.userRepositiory.getUserByUserName(name);
+		contact.setUser(user);
+		user.getContacts().add(contact);
+		
+		this.userRepositiory.save(user);
+		
+		System.out.println("Data "+contact);
+		System.out.println("contact added");
+		return "/normal/add_contact_form";
+	}
+	
+}

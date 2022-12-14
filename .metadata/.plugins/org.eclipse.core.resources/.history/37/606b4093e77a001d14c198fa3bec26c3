@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+
+<head>
+	<meta charset="UTF-8">
+	<title th:text="${title}"></title>
+</head>
+
+<body>
+	<section>
+		
+	</section>
+</body>
+
+</html>

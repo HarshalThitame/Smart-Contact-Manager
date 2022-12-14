@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+
+<head>
+<meta charset="UTF-8">
+<title th:text="${title}"></title>
+</head>
+
+<body>
+	<section>
+		<div class="container">
+
+			<div class="card">
+				<div class="card-body text-center my-4">
+
+					<img style="height: 200px; width: 200px;"
+						class="my_profile_picture" alt=""
+						th:src="@{'/profiles/'+${user.imageUrl}}">
+
+					<h3 class="mt-3">
+						<span th:text="${user.name}"></span>
+						<hr />
+					</h3>
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 offset-md-3">
+								<div class="card">
+									<div class="card-body">
+
+
+										<form action="">
+
+											<div class="col-auto">
+												<div class="input-group mb-2">
+													
+													<input type="text" class="form-control m-2" id="firstname"
+														 placeholder="Enter Old Password"
+														name="oldPassword">
+												</div>
+											</div>
+											<hr />
+											
+											<div class="col-auto">
+
+													<div class="form-group my-2 text-end">
+														<input type="password" id="upassword" name="password"
+															class="form-control" placeholder="Enter Password"
+															required /> <label id="message"></label>
+													</div>
+												</div>
+											
+											<div class="col-auto">
+
+													<div class="form-group my-2 text-end">
+														<input type="password" id="uconfirmpassword"
+															name="confirmpassword" class="form-control" style=""
+															placeholder="Confirm Password" disabled required /> <label
+															id="message2" style="color: red"></label>
+													</div>
+												</div>
+											
+											<div class="container text-center mt-4">
+												<a href="#"  class=""></a>
+		                                        <button type="submit" class="btn btn-outline-warning btn-lg text-dark disabled">Update Password</button>
+											</div>
+											
+											
+
+                                       
+
+
+											
+
+										</form>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<!--javascript-->
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+		
+		
+		<!--check password-->
+        <script>
+            $(document).ready(function ()
+            {
+                console.log("page is ready..");
+
+
+                //check Password
+                $('#upassword').keyup(function () {
+                    if ($(this).val().length >= 4)
+                    {
+                        document.getElementById("message").style.color = 'green';
+                        document.getElementById("uconfirmpassword").removeAttribute("disabled")
+
+                        document.getElementById('message').innerHTML = "Strong Password !";
+                    } else
+                    {
+                        document.getElementById("message").style.color = 'red';
+                        $('#regbtn').addClass('disabled');
+                        document.getElementById('message').innerHTML = "Weak Password !";
+                        document.getElementById("uconfirmpassword").setAttribute("disabled", "")
+
+                    }
+                })
+
+
+                //check Confirm password
+
+                $('#uconfirmpassword').keyup(function () {
+                    if ($(this).val() == $('#upassword').val())
+                    {
+                        document.getElementById("message2").style.color = 'green';
+
+                        document.getElementById('message2').innerHTML = "Password match !";
+                        $('#regbtn').removeClass('disabled');
+                    } else
+                    {
+                        document.getElementById("message2").style.color = 'red';
+
+                        document.getElementById('message2').innerHTML = "Passowrd does not match !";
+                    }
+                });
+
+
+
+
+
+
+
+            });
+        </script>
+		
+	</section>
+</body>
+
+</html>

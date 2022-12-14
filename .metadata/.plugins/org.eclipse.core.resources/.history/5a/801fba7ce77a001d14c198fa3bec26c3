@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+
+<head>
+	<meta charset="UTF-8">
+	<title th:text="${title}"></title>
+</head>
+
+<body>
+	<section>
+		<h1>This is private profile</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi accusamus eligendi impedit possimus tempora
+			amet fuga earum facilis quibusdam unde molestiae perferendis tenetur veniam delectus aut error officiis
+			obcaecati consectetur voluptates placeat corrupti excepturi ipsum quis aliquam asperiores vitae ratione
+			eaque iure ut consequuntur minima deserunt ipsam nesciunt eveniet nam odio vel? Vel eos sunt adipisci rerum
+			ipsa omnis accusantium fuga et fugit facere aliquid esse molestiae cupiditate ut iusto natus dolore a
+			laborum perferendis unde sed ullam officiis inventore atque tenetur quis eveniet sit repellat sint doloribus
+			odio quos illum possimus. Provident illum debitis inventore sed quas quo animi.</p>
+	</section>
+</body>
+
+</html>

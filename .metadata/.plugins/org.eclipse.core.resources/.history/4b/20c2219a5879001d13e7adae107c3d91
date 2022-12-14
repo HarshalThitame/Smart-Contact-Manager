@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>User Dashboard</title>
+</head>
+<body>
+	<h1>welcome you are normal user</h1>
+	<h2>this  is private dashboard</h2>
+	<h2>User Name = <span th:text=${user.name}></span></h2>
+</body>
+</html>
